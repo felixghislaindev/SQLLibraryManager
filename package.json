@@ -1,0 +1,23 @@
+{
+  "name": "sqllibrarymanager",
+  "version": "1.0.0",
+  "description": "fullstack appllication with node and mysql usiing squelize as the ORM ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "felix",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "express-sequelize": "0.0.4",
+    "http": "0.0.0",
+    "method-override": "^3.0.0",
+    "pug": "^2.0.3",
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.4.0",
+    "sqlite3": "^4.0.6"
+  }
+}

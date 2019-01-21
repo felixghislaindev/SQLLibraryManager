@@ -104,13 +104,16 @@ router.delete("/books/:id", (req, res) => {
 
 // searching functionality
 router.post("/books/search", (req, res) => {
+  // capitilizing first letter since or data as capatilize fist letter for all rows
+  const searchWord =
+    req.body.search.charAt(0).toUpperCase() + req.body.search.slice(1);
   Book.findAll({
     where: {
       [Op.or]: [
-        { title: req.body.search },
-        { author: req.body.search },
-        { genre: req.body.search },
-        { year: req.body.search }
+        { title: searchWord },
+        { author: searchWord },
+        { genre: searchWord },
+        { year: searchWord }
       ]
     }
   }).then(books => {

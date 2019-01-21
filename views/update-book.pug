@@ -3,7 +3,7 @@ block content
     h1 Update Book
     if(errors)
         each err in errors
-         p=err.message
+         p.error=err.message
      
     form( action=`/books/${book.id}?_method=PUT` method='post')
         p

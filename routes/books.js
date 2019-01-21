@@ -30,7 +30,19 @@ router.get("/", (req, res) => {
 });
 // show full book list
 router.get("/books", (req, res) => {
-  Book.findAll().then(books => {
+  Book.findAll({ limit: 6 }).then(books => {
+    res.render("index", { books: books });
+  });
+});
+// page two
+router.get("/books/page2", (req, res) => {
+  Book.findAll({ limit: 6, offset: 6 }).then(books => {
+    res.render("index", { books: books });
+  });
+});
+// page three
+router.get("/books/page3", (req, res) => {
+  Book.findAll({ limit: 6, offset: 12 }).then(books => {
     res.render("index", { books: books });
   });
 });

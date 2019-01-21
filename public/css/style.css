@@ -129,3 +129,14 @@ input[type="submit"] {
   cursor: pointer;
   font-size: 20px;
 }
+/* pages */
+.pages {
+  margin-left: 777px;
+}
+.pages li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.nav:hover {
+  border-bottom: solid 1px black;
+}
